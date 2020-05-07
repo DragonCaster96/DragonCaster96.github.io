@@ -1,3 +1,4 @@
+/*
 const express = require('express')
 
 var app = express.createServer(express.logger())
@@ -9,7 +10,6 @@ app.use((req, res, next) => {
   next()
 })
 
-/*
 app.post('/api/-CAT-Agent-Creation-Form-API-', (req, res) => {
   	request(
     	{ url: 'https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-' },
@@ -22,10 +22,10 @@ app.post('/api/-CAT-Agent-Creation-Form-API-', (req, res) => {
 		}
 		)
 });
-*/
 
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, function() {
-  //console.log('APP LISTENING ON PORT: ' + PORT);
+  
 })
+*/
