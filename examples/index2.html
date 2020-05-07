@@ -21,6 +21,7 @@
 			</div>
 		-->
 		<div style="margin: 5px; padding: 5px; text-align: center; height: 100%;" class="">
+			<button onclick="createEntity()">Create Agent / Agency Button</button>
 			<h1 style="font-size: 16px;" class="">Don't miss anything!</h1>
 			<h2 style="margin-top: 8px; font-size: 16px;" class="">Get to your nearest DQ today!</h2>
 			<div style="justify-content: center; align-items: center;" class="row">
@@ -186,6 +187,24 @@
 		}
 	</style>
 	<script type="text/javascript">
+		var url = "https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-";
+		var data = {};
+		var dataType = "json";
+
+		function createEntity() {
+			$.ajax({
+				type: "POST",
+		  		url: url,
+		  		data: data,
+		  		success: success,
+		  		dataType: dataType
+			});
+		}
+
+		function success() {
+			alert("The process has completed!");
+		}
+
 		/*
 		Date d = new Date.now();
 
