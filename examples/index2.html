@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+		<script src="../src/CAT-API.js"></script>
 
 		<link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
       	
@@ -208,44 +210,6 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-		const express = require('express');
-		const request = require('request');
-		
-		var app = express.createServer(express.logger());
-
-		app.use(express.bodyParser());
-
-		function createEntity() {
-			app.post('/', function(request, response) {
-			    response.write(request.body.user);
-			    response.end();
-			});
-		}
-		
-		/*
-		app.use((req, res, next) => {
-		  res.header('Access-Control-Allow-Origin', '*');
-		  next();
-		});
-
-		app.post('/api/-CAT-Agent-Creation-Form-API-', (req, res) => {
-		  	request(
-		    	{ url: 'https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-' },
-		    	(error, response, body) => {
-		      		if (error || response.statusCode !== 200) {
-		        		return res.status(500).json({ type: 'error', message: err.message });
-		      		}
-
-		      		res.json(JSON.parse(body));
-	    		}
-	  		)
-		});
-		*/
-
-		const PORT = process.env.PORT || 3000;
-		app.listen(PORT, () => console.log(`listening on ${PORT}`));
-
-		/*
 		var url = "https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-";
 		var data = {};
 		var dataType = "json";
@@ -263,8 +227,7 @@
 		function success() {
 			alert("The process has completed!");
 		}
-		*/
-		/*
+		
 		Date d = new Date.now();
 
 		console.log(d);
