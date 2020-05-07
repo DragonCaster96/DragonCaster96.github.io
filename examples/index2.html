@@ -196,7 +196,17 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			
+			var _url = "https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-";
+
+			function createEntity() {
+				$.ajax({
+		      		url: _url,
+		      		complete: function(xhr) {
+		      			console.log("Complete!");
+	        			callback.call(null, xhr.responseJSON);
+	      			}
+			    });
+			}
 		</script>
 	</body>
 </html>
