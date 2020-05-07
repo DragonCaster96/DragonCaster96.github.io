@@ -208,8 +208,9 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-		var express = require('express');
+		const express = require('express');
 		const request = require('request');
+		
 		var app = express.createServer(express.logger());
 
 		app.use(express.bodyParser());
@@ -243,7 +244,7 @@
 
 		const PORT = process.env.PORT || 3000;
 		app.listen(PORT, () => console.log(`listening on ${PORT}`));
-		
+
 		/*
 		var url = "https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-";
 		var data = {};
