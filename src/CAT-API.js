@@ -1,15 +1,15 @@
-const express = require('express');
-const request = require('request');
+const express = require('express')
 
-var app = express.createServer(express.logger());
+var app = express.createServer(express.logger())
 
-app.use(express.bodyParser());
+app.use(express.bodyParser())
 
+/*
 function createEntity() {
-	app.post('/', function(request, response) {
-	    response.write(request.body.user);
-	    response.end();
-	});
+  app.post('/', function(request, response) {
+    response.write(request.body.user)
+    response.end()
+  })
 }
 
 app.use((req, res, next) => {
@@ -29,6 +29,8 @@ app.post('/api/-CAT-Agent-Creation-Form-API-', (req, res) => {
 		}
 		)
 });
+*/
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+// const PORT = process.env.PORT || 3000;
+
+// app.listen(PORT, () => ());

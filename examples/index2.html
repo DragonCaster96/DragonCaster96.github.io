@@ -52,20 +52,6 @@
 		</style>
 	</head>
 	<body height="100%" class='container-fluid'>
-		<!--
-			<div class="container-fluid">
-				<form onsubmit="RunFunction()">
-				  <label for="fname">First name:</label><br>
-				  <input type="text" id="fname" name="fname"><br><br>
-				  <label for="lname">Last name:</label><br>
-				  <input type="text" id="lname" name="lname"><br><br>
-				  <label for="lname">Team:</label><br>
-				  <input type="text" id="lname" name="lname">
-				  <br><br>
-				  <button>SUBMIT</button>
-				</form>
-			</div>
-		-->
 		<div style="margin: 5px; padding: 5px; text-align: center; height: 100%;" class="">
 			<button onclick="createEntity()">Create Agent / Agency Button</button>
 			<h1 style="font-size: 16px;" class="">Don't miss anything!</h1>
@@ -210,86 +196,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-		var url = "https://portal.copelandgroupusa.com/api/-CAT-Agent-Creation-Form-API-";
-		var data = {};
-		var dataType = "json";
-
-		function createEntity() {
-			$.ajax({
-				type: "POST",
-		  		url: url,
-		  		data: data,
-		  		success: success,
-		  		dataType: dataType
-			});
-		}
-
-		function success() {
-			alert("The process has completed!");
-		}
 		
-		Date d = new Date.now();
-
-		console.log(d);
-
-		function RunFunction() {
-			var object = {
-				EntitySID: 0,
-        		Deceased: 0,
-                EntityType: 1,
-          		EntityName: document.getElementById('fname').value + ' ' + document.getElementById('lname'),
-        		EntityFullName: document.getElementById('fname').value + ' ' + document.getElementById('lname'),
-        		NickName: '',
-        		Suffix: '',
-        		TaxID: '',
-       			DateOfBirth: new Date('December 3rd, 1999'),
-       			Gender: '',
-        		SocialSecurityNumber: 000000000,
-        		EmailAddress: '',
-        		AltEmailAddress: '',
-        		PrimaryPhoneNumber: '',
-        		CellPhoneNumber: '',
-        		OfficePhoneNumber: '',
-        		OfficeContactName: '',
-        		NPN: '',
-        		HireDate: new Date('November 20th, 2017'),
-        		TerminationDate: 0,
-        		IsAnEmployee: 0,
-       			ContactDirectly: 0,
-        		LHAgent: 0,
-       			LowProducerUHC: 0,
-        		EligibleToRecontract: 0,
-        		PCAgent: 0,
-        		UserSID: 0,
-       			ImageSID: 0,
-        		CreatedByUserSID: 0, // This would be the team sid person
-       			ModifiedByUserSID: null,
-        		DateStamp: new Date()
-			};
-
-			var _url = "http://devportal.copelandgroupusa.com/api/user/-CAT-Agent-Creation-Form-API-";
-			var _data = JSON.stringify(object);
-
-			$.ajax({
-			  type: "POST",
-		      dataType: 'jsonp', //use jsonp data type in order to perform cross-domain ajax 
-			  crossDomain: true,
-			  url: _url,
-			  body: _data,
-			  success: success(),
-			  error: error(),
-			  dataType: "json"
-			});
-
-			function success() {
-				console.log("It did work!");
-			}
-
-			function error() {
-				console.log("It did not work!");
-			}
-		}
-		*/
-	</script>
+		</script>
 	</body>
 </html>
