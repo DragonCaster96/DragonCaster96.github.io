@@ -28,24 +28,16 @@
 	</head>
 	<script type="text/javascript">
 		var express = require('express');
+		const request = require('request');
 		var app = express.createServer(express.logger());
+
 		app.use(express.bodyParser());
 
 		app.post('/', function(request, response) {
 		    response.write(request.body.user);
 		    response.end();
 		});
-
-
-
-
-
-
-		const express = require('express');
-		const request = require('request');
-
-		const app = express();
-
+		
 		app.use((req, res, next) => {
 		  res.header('Access-Control-Allow-Origin', '*');
 		  next();
