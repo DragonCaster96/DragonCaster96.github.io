@@ -26,4 +26,6 @@ app.post('/api/-CAT-Agent-Creation-Form-API-', (req, res) => {
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, 'IDK')
+app.listen(PORT, function() {
+  //console.log('APP LISTENING ON PORT: ' + PORT)
+})
